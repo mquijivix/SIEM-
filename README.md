@@ -1,10 +1,10 @@
 # SIEM- Building a Custom SIEM with Elastic 
-![Elastics SIEM)]()
 
+![Building a Custom SIEM with Elastic copy.pdf](https://github.com/user-attachments/files/16041939/Building.a.Custom.SIEM.with.Elastic.copy.pdf)
 
 ## Introduction
 
-In this guide, I'll walk you through the steps to set up a customizable home lab for Elastic Stack Security Information and Event Management (SIEM) using the Elastic Web portal and a Kali Linux VM. You will learn how to generate security events on the Kali VM, set up an agent to forward data to the SIEM, query and analyze logs within the SIEM environment, and create custom alerts to enhance security monitoring
+In this guide, I'll lead you through setting up a personalized home lab for Elastic Stack Security Information and Event Management (SIEM) using the Elastic Web portal and a Kali Linux VM. You'll gain hands-on experience in generating security events on the Kali VM, configuring an agent to transmit data to the SIEM, analyzing logs within the SIEM environment, and crafting custom alerts to bolster security monitoring capabilities
 
 - Virtual Box  
 -  Kali Linux
