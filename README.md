@@ -12,17 +12,17 @@ In this guide, I'll lead you through setting up a personalized home lab for Elas
 
 
 ## Setting up the Agent to Collect Logs 
-In Elastic SIEM, an agent is a software program installed on devices like servers or endpoints to collect and send data for centralized analysis and monitoring of security events. To integrate an agent with your Elastic SIEM instance, follow these steps:
+In Elastic SIEM, an agent serves as a software program installed on devices like servers or endpoints to gather and transmit data for centralized analysis and monitoring of security events. Here’s how I integrated an agent with my Elastic SIEM instance:
 
-Log in to your Elastic SIEM instance and access the Integrations page.
-Search for “Elastic Defend” and click on it to open the integration page.
+Logged in to my Elastic SIEM instance and navigated to the Integrations page.
+Searched for “Elastic Defend” and clicked on it to access the integration page.
+Clicked on “Install Elastic Defend” and followed the provided instructions tailored for installing the agent on my Kali Linux VM.
+Selected “Linux”, then copied the command provided on the integration page to my clipboard.
+Pasted the copied command into the terminal (command line) of my Kali Linux VM to complete the installation process.
 
-On the integration page, click “Install Elastic Defend” and follow the provided instructions specific to installing the agent on your Kali Linux VM.
+[Intsalling Agent] ![Elastic Agent ](https://github.com/mquijivix/SIEM-/assets/173574799/3e8a1ae4-e878-44c5-b5bd-f0da53b9d53c)
 
-Ensure “Linux” is selected, then copy the command provided on the integration page to your clipboard.
 
-Paste the copied command into the terminal (command line) of your Kali Linux VM to complete the installation process
-![]()
 
 
 ## Generating Security Events on the Kali VM 
@@ -31,6 +31,9 @@ To ensure the agent is functioning correctly, you can validate it by generating 
 Next, initiate a scan on your Kali machine with the command: sudo nmap <vm-ip>. You can also scan your host machine if your Kali VM is on a 'bridged' network configuration.
 
 These scans produce various security events, such as identifying open ports and services running on those ports. Conduct multiple Nmap scans to further test the agent's functionality.
+
+[Generating Security Event] 
+![Trigger nmap ](https://github.com/mquijivix/SIEM-/assets/173574799/dbf83e19-0b16-4fda-814b-36ca738787ca)
 
 
 
@@ -44,6 +47,12 @@ Within your Elastic Deployment, navigate to the 'Logs' tab under 'Observability'
 In the search bar, enter a query to filter the logs. For instance, to find logs related to Nmap scans, you can use a query like: event.action: "nmap_scan" OR process.args: "sudo".
 
 Click the 'Search' button to execute the query. The search results will be displayed in a table.
+
+
+[Qurying nmap] 
+
+<img width="703" alt="nmap Querry " src="https://github.com/mquijivix/SIEM-/assets/173574799/edc017c5-0f4f-4302-9f8e-136cfd5e1ad4">
+
 
 
 
