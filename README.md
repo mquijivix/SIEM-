@@ -11,6 +11,8 @@ In this guide, I'll lead you through setting up a personalized home lab for Elas
 -  Elastic 
 
 
+
+
 ## Setting up the Agent to Collect Logs 
 In Elastic SIEM, an agent serves as a software program installed on devices like servers or endpoints to gather and transmit data for centralized analysis and monitoring of security events. Here’s how I integrated an agent with my Elastic SIEM instance:
 
@@ -20,7 +22,11 @@ Clicked on “Install Elastic Defend” and followed the provided instructions t
 Selected “Linux”, then copied the command provided on the integration page to my clipboard.
 Pasted the copied command into the terminal (command line) of my Kali Linux VM to complete the installation process.
 
+
+
 [Intsalling Agent] ![Elastic Agent ](https://github.com/mquijivix/SIEM-/assets/173574799/3e8a1ae4-e878-44c5-b5bd-f0da53b9d53c)
+
+
 
 
 
@@ -32,8 +38,12 @@ Next, initiate a scan on your Kali machine with the command: sudo nmap <vm-ip>. 
 
 These scans produce various security events, such as identifying open ports and services running on those ports. Conduct multiple Nmap scans to further test the agent's functionality.
 
+
+
 [Generating Security Event] 
 ![Trigger nmap ](https://github.com/mquijivix/SIEM-/assets/173574799/dbf83e19-0b16-4fda-814b-36ca738787ca)
+
+
 
 
 
@@ -49,6 +59,8 @@ In the search bar, enter a query to filter the logs. For instance, to find logs 
 Click the 'Search' button to execute the query. The search results will be displayed in a table.
 
 
+
+
 [Qurying nmap] 
 
 <img width="703" alt="nmap Querry " src="https://github.com/mquijivix/SIEM-/assets/173574799/edc017c5-0f4f-4302-9f8e-136cfd5e1ad4">
@@ -57,18 +69,15 @@ Click the 'Search' button to execute the query. The search results will be displ
 
 
 
-
-
-![]()
-
-![]()
-
-![]()
-
-
 ## Create a Dashboard to Visualize the Events
 
 In addition to querying logs directly, you can leverage the visualizations and dashboards within the SIEM app to conduct in-depth analysis and detect patterns or anomalies in the data. For instance, you can create a straightforward dashboard that displays a chronological count of security events over time
+
+
+
+[Setting up SIEM] 
+![Custom SIEM Map ](https://github.com/mquijivix/SIEM-/assets/173574799/89a91049-9bdc-483d-9c23-57e95f34b3e2)
+
 
 
 
@@ -77,6 +86,17 @@ In addition to querying logs directly, you can leverage the visualizations and d
 ## Create an Alert
 
 In a SIEM environment, alerts play a critical role in identifying security incidents promptly and initiating appropriate responses. These alerts are generated from predefined rules or custom queries, configured to trigger specific actions when certain conditions are met. In this tutorial, we'll guide you through creating an alert within the Elastic SIEM instance to detect Nmap scans, directing notifications to email alerts
+
+
+
+
+[Custom Alert]
+
+
+<img width="808" alt="Setting up Alert " src="https://github.com/mquijivix/SIEM-/assets/173574799/cf5f0723-3166-412b-b01e-c5d1fbd3fa57">
+
+
+
 
 
 
