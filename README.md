@@ -24,7 +24,7 @@ Pasted the copied command into the terminal (command line) of my Kali Linux VM t
 
 
 
-[Intsalling Agent] ![Elastic Agent ](https://github.com/mquijivix/SIEM-/assets/173574799/3e8a1ae4-e878-44c5-b5bd-f0da53b9d53c)
+[Installing Agent] ![Elastic Agent ](https://github.com/mquijivix/SIEM-/assets/173574799/3e8a1ae4-e878-44c5-b5bd-f0da53b9d53c)
 
 
 
